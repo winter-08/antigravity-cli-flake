@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: cachix/install-nix-action@v31
+
+      - name: Check flake evaluation
+        run: nix flake check --no-build
+
+      - name: Build glibc package
+        run: nix build .#antigravity-cli --print-build-logs
+
+      - name: Verify glibc ELF RUNPATH and version
+        run: |
+          ./result/bin/agy --version
+          readelf -d ./result/libexec/agy | grep -E 'RUNPATH|RPATH'
+
+      - name: Build static musl package
+        run: nix build .#antigravity-cli-musl --print-build-logs
+
+      - name: Verify static musl ELF and version
+        run: |
+          ./result/bin/agy --version
+          readelf -d ./result/libexec/agy | grep -q "no dynamic section"
+
+  darwin:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: cachix/install-nix-action@v31
+
+      - name: Build darwin package
+        run: nix build .#antigravity-cli --print-build-logs
+
+      - name: Verify version
+        run: ./result/bin/agy --version

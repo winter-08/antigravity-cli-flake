@@ -1,0 +1,45 @@
+name: Update Antigravity CLI
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: cachix/install-nix-action@v31
+
+      - name: Update sources.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: nix run .#update
+
+      - name: Verify builds when updated
+        run: |
+          if git diff --quiet sources.json; then
+            echo "Already up to date."
+          else
+            nix build .#antigravity-cli --print-build-logs
+            ./result/bin/agy --version
+            nix build .#antigravity-cli-musl --print-build-logs
+            ./result/bin/agy --version
+          fi
+
+      - name: Commit and push changes
+        run: |
+          if git diff --exit-code sources.json; then
+            echo "No changes to commit."
+          else
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add sources.json
+            git commit -m "Update Antigravity CLI to $(jq -r .version sources.json)"
+            git push
+          fi
