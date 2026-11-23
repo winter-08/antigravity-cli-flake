@@ -1,43 +1,43 @@
 {
-  "version": "1.5.14",
-  "buildId": "5799134742052864",
+  "version": "1.5.15",
+  "buildId": "5514532022517760",
   "platforms": {
     "x86_64-linux": {
       "glibc": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/linux-x64/cli_linux_x64.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/linux-x64/cli_linux_x64.tar.gz",
         "githubAsset": "agy_cli_linux_x64.tar.gz",
-        "hash": "sha512-pdhjWXa/2NLsCFhIGJ0k/0+k2RZc8Tgv4NwpICrzzoX30F+9mAH38hijxdxvFs/QhQFXICZwYk3tKXWnzF0RLA=="
+        "hash": "sha512-rz8L5YuEdZQNefmr6hnnYuzD0mXqn1bP+N2AXie6KZtEowWnlQSn/+br36KaKUxW7cTK7Rh1mQv68v7xUI7IsA=="
       },
       "musl": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/linux-x64-musl/cli_linux_x64_musl.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/linux-x64-musl/cli_linux_x64_musl.tar.gz",
         "githubAsset": "agy_cli_linux_x64_musl.tar.gz",
-        "hash": "sha512-JScZe/zafZjwQo1WlRmnnpllcDYmXcAKntrwi9xjPKCOEuB/la9pyU58ixJHe7p/Rg0s5Mb6xdpJEbcw3m8M9Q=="
+        "hash": "sha512-G5CQSornfk0ZkUvdYne68HFAXYebDCnLy2pZqV9/GIMKA+N6pD+31Z7uTDTbufRaz3GPAoj4Zv/fEaTeFJjK5Q=="
       }
     },
     "aarch64-linux": {
       "glibc": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/linux-arm/cli_linux_arm64.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/linux-arm/cli_linux_arm64.tar.gz",
         "githubAsset": "agy_cli_linux_arm64.tar.gz",
-        "hash": "sha512-AyNL+05TLlAET5zuncomP3tF+BK3iGJdY6aQ9szKb/QpJyXzbQsjNrM7RvNusjdOF52DS3bE6VvdMzg2+uzK8Q=="
+        "hash": "sha512-1krXWXgbUN+s+n2YJsCtRplZ0BvfWhcKzUyDRy66McZ3uvAFKsirSO70Dw0/DiYFfnUqq9JDMcefTIgdS4chJQ=="
       },
       "musl": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/linux-arm-musl/cli_linux_arm64_musl.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/linux-arm-musl/cli_linux_arm64_musl.tar.gz",
         "githubAsset": "agy_cli_linux_arm64_musl.tar.gz",
-        "hash": "sha512-BbquRJ5cqxH/a2RhHxvLGPM+g2b2XGlaurrUNGACZl7UQ2aYirgnwZV+0OSD+Rp1qt6LFrNFux7IsO7a5v6czw=="
+        "hash": "sha512-B885QOPnBS9+WPgOD8LjwX9/Mqo929mHRHABq+yJ7V8hF8VXdADX2xxrGEGUi5TIb63zgj7qSwBIjD+gZlmOpw=="
       }
     },
     "x86_64-darwin": {
       "darwin": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/darwin-x64/cli_mac_x64.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/darwin-x64/cli_mac_x64.tar.gz",
         "githubAsset": "agy_cli_mac_x64.tar.gz",
-        "hash": "sha512-qMNgTJY/wUtS8c1tQXCrFMerQwfODpoR/i2DBV47swoCy6Q8dNI9SQdPJ/lcz1Evc2IiTS16URFRuyIs+YCSow=="
+        "hash": "sha512-Inbg8YmpF+fqpLAOzln+ahBikURy4TJH9AK1b+JsmvrNCvSUR24xpWEPsLJzQAykAT8nPVbWnG/dfi0OyTP1lg=="
       }
     },
     "aarch64-darwin": {
       "darwin": {
-        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.14-5799134742052864/darwin-arm/cli_mac_arm64.tar.gz",
+        "gcsUrl": "https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.15-5514532022517760/darwin-arm/cli_mac_arm64.tar.gz",
         "githubAsset": "agy_cli_mac_arm64.tar.gz",
-        "hash": "sha512-sF0IV9myQQLa4jtnLhMjBSBHqBDhApACqejJf4VgGZ7OZbQgqWX1J5DvwduNwC1k+x4hgJ/q6wgwlHflcFud6w=="
+        "hash": "sha512-sDqEHrOim+kYpmlgt3X2jtTzvMAvM5YhMbu8JsRuqYPOrGyDKtRu/RHXPZosuX30qyTUvJLuR9PV7Oe42LYSNQ=="
       }
     }
   }
